@@ -2,7 +2,7 @@ import { useEffect, useRef, useState } from 'react';
 
 function haversineDistance(lat1, lon1, lat2, lon2) {
     const toRad = (value) => (value * Math.PI) / 180;
-    const R = 6371000; // شعاع زمین به متر
+    const R = 6371000;
 
     const dLat = toRad(lat2 - lat1);
     const dLon = toRad(lon2 - lon1);
@@ -13,7 +13,7 @@ function haversineDistance(lat1, lon1, lat2, lon2) {
     const c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
     const d = R * c;
 
-    return d; // فاصله به متر
+    return d;
 }
 
 export default function StepCounter() {
@@ -59,7 +59,7 @@ export default function StepCounter() {
             {
                 enableHighAccuracy: true,
                 maximumAge: 1000,
-                timeout: 5000,
+                timeout: 15000,
             }
         );
 
