@@ -59,7 +59,7 @@ export default function StepCounter() {
             {
                 enableHighAccuracy: true,
                 maximumAge: 1000,
-                timeout: 15000,
+                timeout: Infinity,
             }
         );
 
